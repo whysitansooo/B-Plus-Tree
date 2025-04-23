@@ -74,6 +74,42 @@ Node(0x55f5e76a9060): [10|20] (Leaf) -> Parent(0x55f5e76a8eb0)
 
 > Delete(10)
 > Display
+```
 
+## 🧩 Implementation Details
+
+- The tree dynamically adjusts its structure through **node splitting** and **merging**.
+- **Leaf nodes** store both keys and values.
+- **Internal nodes** store keys and pointers to child nodes.
+- Efficient **redistribution** and **merging algorithms** maintain tree balance after deletions.
+- The visual tree display shows:
+  - Memory addresses of nodes
+  - Keys within nodes
+  - Parent-child relationships
+
+---
+
+## ⚙️ Building & Running
+
+### 🔧 Prerequisites
+
+- A **C++ compiler** supporting **C++11** or later.
+
+### 🏗️ Build
+
+```bash
+g++ -std=c++11 main.cpp -o bplustree
+```
+## Notes
+- The current implementation has a maximum order size of 50 (configurable via MAX constant)
+- **If an order greater than 50 is specified, it defaults to 3
+- Memory management is handled automatically
+## Performance
+B+ Trees provide efficient operations with the following average time complexities:
+
+-**Search**: O(log n)
+-**Insert**: O(log n)
+-**Delete**: O(log n)
+Where n is the number of keys in the tree.
 
 
