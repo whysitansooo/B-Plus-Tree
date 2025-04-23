@@ -47,3 +47,33 @@ B+ Trees are balanced tree structures that maintain sorted data and allow for **
 
 ## 💡 Usage Example
 
+```bash
+> Initialize(3)
+> Insert(10,100.5)
+> Insert(20,200.75)
+> Insert(5,50.25)
+> Display
+
+==== B+ TREE STRUCTURE ====
+
+Node(0x55f5e76a8eb0): [10] (Internal) -> Root
+  Child[0]: 0x55f5e76a8f20
+  Child[1]: 0x55f5e76a9060
+
+=== LEVEL 1 ===
+Node(0x55f5e76a8f20): [5] (Leaf) -> Parent(0x55f5e76a8eb0)
+Node(0x55f5e76a9060): [10|20] (Leaf) -> Parent(0x55f5e76a8eb0)
+
+=========================
+
+> Search(10)
+100.5
+
+> Search(5,20)
+50.25 ,100.5 ,200.75 ,
+
+> Delete(10)
+> Display
+
+
+
